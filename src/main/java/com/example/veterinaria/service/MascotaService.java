@@ -1,0 +1,36 @@
+package com.example.veterinaria.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.veterinaria.model.Mascota;
+import com.example.veterinaria.repository.MascotaRepository;
+
+//esta clase tiene el autowired para la inyeccion de dependencias @Autowired
+//Intermediario entre controller y el Repository
+//creamos los métodos que necesitemos. En esta primera instancia necesitamos uno que obtenga (findall) mascotas y otro que guarde mascotas save()
+
+@Service
+public class MascotaService {
+
+    @Autowired // para la inyeccion de dependencias
+    private MascotaRepository mascotaRepository; // traemos lo que está en la capa de repository a la de servicio
+
+    public List<Mascota> mascotaObtener(){ // hacemos una lista para las mascotas
+
+        return this.mascotaRepository.findAll();  // obtenemos todas las mascotas que tengamos listadas
+    }
+
+
+    //metodo para guardar
+
+    public void mascotaAlmacenar(Mascota mascota){
+
+        return this.mascotaRepository.save(mascota);
+    }
+
+
+
+}
