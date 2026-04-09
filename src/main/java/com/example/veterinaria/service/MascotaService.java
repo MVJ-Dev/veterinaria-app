@@ -28,9 +28,21 @@ public class MascotaService {
 
     public void mascotaAlmacenar(Mascota mascota){
 
-        return this.mascotaRepository.save(mascota);
+        this.mascotaRepository.save(mascota);
+        
     }
 
+    //método para eliminar mascotas. Recibe un ID de tipo string y llama a DeletebyID()
+
+    public void mascotaEliminar(String id){ //le pasamos el ID
+        this.mascotaRepository.deleteById(id);
+    }
+
+    //método para modificar. Recibe un ID de tipo string y un objeto mascota.
+
+    public void mascotaModificar(String id, Mascota mascota){
+        this.mascotaRepository.save(mascota);
+    }
 
 
 }

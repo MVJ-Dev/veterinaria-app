@@ -15,7 +15,7 @@ import com.example.veterinaria.service.MascotaService;
 //Controller es la puerta de entrada de la API
 // Recibe peticiones HTTP y devuelve las respuestas en formato JSON
 @RestController 
-@RequestMapping("/Mascotas")
+@RequestMapping("/mascotas")
 public class MascotaController {
 
     @Autowired //llamamos a service e inyectamos las dependencias.
