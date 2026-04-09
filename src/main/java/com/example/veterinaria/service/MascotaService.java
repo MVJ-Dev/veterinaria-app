@@ -24,9 +24,9 @@ public class MascotaService {
     }
 
 
-    //metodo para guardar
+    //metodo para almacenar. Antes de guardar, se debe verificar si una mascota ya existe con ese id.
 
-    public void mascotaAlmacenar(Mascota mascota){
+    public String mascotaAlmacenar(Mascota mascota){
 
         this.mascotaRepository.save(mascota);
         
