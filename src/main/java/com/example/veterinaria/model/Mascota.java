@@ -27,7 +27,7 @@ public class Mascota {
         this.especie = especie;
         this.raza = raza;
         this.edad = edad;
-        nombreDueno = nombreDueno;
+        this.nombreDueno = nombreDueno;
     }
 
 
@@ -99,7 +99,7 @@ public class Mascota {
 
 
     public void setnombreDueno(String nombreDueno) {
-        nombreDueno = nombreDueno;
+        this.nombreDueno = nombreDueno;
     }
 
 
