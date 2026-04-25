@@ -29,6 +29,7 @@ public class MascotaService {
     public String mascotaAlmacenar(Mascota mascota){
 
         this.mascotaRepository.save(mascota);
+        return "Mascota Almacenada";
         
     }
 
