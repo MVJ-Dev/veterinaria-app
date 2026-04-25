@@ -29,8 +29,11 @@ public class MascotaService {
     public String mascotaAlmacenar(Mascota mascota){
 
         this.mascotaRepository.save(mascota);
+        return "Mascota Almacenada";
         
     }
+
+    //fsdfsdfsdfsdf
 
     //método para eliminar mascotas. Recibe un ID de tipo string y llama a DeletebyID()
 
